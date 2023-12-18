@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "API3 oracle timestamp can be set to future timestamp and block API3 Oracle usage to make code revert in underflow",
+  "issueId": 4,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/4"
+}
