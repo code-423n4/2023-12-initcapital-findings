@@ -1,3 +1,15 @@
+# Table of Contents
+
+| No. | Title                                                           |
+|-----|-----------------------------------------------------------------|
+| 1   | Lack of Multicall Support in MoneyMarketHook                    |
+| 2   | Inaccurate Error Message in MoneyMarketHook.sol                 |
+| 3   | Lack of Function to Transfer Position NFT in MoneyMarketHook    |
+| 4   | Callback Function Value Validation in InitCore.sol              |
+| 5   | Helper Address Validation in MoneyMarketHook.sol                |
+| 6   | USDY Admin Blocklist and Sanction Controls                      |
+| 7   | Managing WLP Whitelisting for Collateralization                 |
+
 # Lack of multicall support in MoneyMarketHook to collaterize WLP or decollaterize WLP
 
 In [MoneyMarketHook.sol](https://github.com/code-423n4/2023-12-initcapital/blob/a53e401529451b208095b3af11862984d0b32177/contracts/hook/MoneyMarketHook.sol#L53), there is no function to let user collateralize WLP or decollaterlaize WLP
@@ -120,12 +132,3 @@ _require(_config.whitelistedWLps(_wLp), Errors.TOKEN_NOT_WHITELISTED);
 so when admin remove WLP from whitelist, the user cannot decollateralize WLP as well
 
 recommendation is do not let WLP unwhitlisting block decollateraliztion
-
-
-
-
-
-
-
-
-
