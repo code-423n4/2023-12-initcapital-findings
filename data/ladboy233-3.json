@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "admin configuration isAllowedForCollateral(mode, pool) can be bypassed by donating asset to the pool directly and then trigger sync cash via flashloan",
+  "issueId": 3,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/3"
+}
