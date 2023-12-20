@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "rvierdiiev",
+  "risk": "3",
+  "title": "Malicious user can still bative tokens of MoneyMarketHook caller",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/19"
+}
