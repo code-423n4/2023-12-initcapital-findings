@@ -9,6 +9,7 @@
 | 5   | Helper Address Validation in MoneyMarketHook.sol                |
 | 6   | USDY Admin Blocklist and Sanction Controls                      |
 | 7   | Managing WLP Whitelisting for Collateralization                 |
+| 8   | Missing price deviation check when there is only one valid oracle                 |
 
 # Lack of multicall support in MoneyMarketHook to collaterize WLP or decollaterize WLP
 
@@ -132,3 +133,35 @@ _require(_config.whitelistedWLps(_wLp), Errors.TOKEN_NOT_WHITELISTED);
 so when admin remove WLP from whitelist, the user cannot decollateralize WLP as well
 
 recommendation is do not let WLP unwhitlisting block decollateraliztion
+
+# Missing price deviation check when there is only one valid oracle
+
+In [Oracle code](https://github.com/code-423n4/2023-12-initcapital/blob/a53e401529451b208095b3af11862984d0b32177/contracts/oracle/InitOracle.sol#L77)
+
+```solidity
+// normal case: both sources are valid
+// check that the prices are not too deviated
+// abnormal case: one of the sources is invalid
+// using the valid source - prioritize the primary source
+// abnormal case: both sources are invalid
+// revert
+_require(isPrimarySourceValid || isSecondarySourceValid, Errors.NO_VALID_SOURCE);
+if (isPrimarySourceValid && isSecondarySourceValid) {
+	// sort Price
+	(uint minPrice_e36, uint maxPrice_e36) = primaryPrice_e36 < secondaryPrice_e36
+		? (primaryPrice_e36, secondaryPrice_e36)
+		: (secondaryPrice_e36, primaryPrice_e36);
+
+	// check deviation
+	_require(
+		(maxPrice_e36 * ONE_E18) / minPrice_e36 <= maxPriceDeviations_e18[_token], Errors.TOO_MUCH_DEVIATION
+	);
+}
+price_e36 = isPrimarySourceValid ? primaryPrice_e36 : secondaryPrice_e36;
+```
+
+when there are two valid price source, the code cross-validates the price deviation,
+
+However, when there is only one valid price, the code consumes the price without checking the price deviation
+
+it is recommended to cache the last price and validate if the new price deviates from the last cached price too much
