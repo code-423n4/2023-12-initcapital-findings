@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "said",
+  "risk": "2",
+  "title": "`setPosMode` should not allow changing the mode when the new mode's `canRepay` status is disabled",
+  "issueId": 26,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/26"
+}
