@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "0x73696d616f",
+  "risk": "2",
+  "title": "Liquidations can possibly be prevented if a liquidate call frontruns another one with a partial liquidation",
+  "issueId": 43,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/43"
+}
