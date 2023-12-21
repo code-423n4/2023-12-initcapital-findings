@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "0x73696d616f",
+  "risk": "2",
+  "title": "Api3OracleReader may be unavailable up to 1 hour if the timestamp of the price from the Api3Server is bigger than the current block.timestamp",
+  "issueId": 39,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/39"
+}
