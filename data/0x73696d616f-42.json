@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "0x73696d616f",
+  "risk": "3",
+  "title": "Liquidations can be prevented by frontrunning and liquidating 1 debt (or more) due to wrong assumption in POS_MANAGER",
+  "issueId": 42,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/42"
+}
