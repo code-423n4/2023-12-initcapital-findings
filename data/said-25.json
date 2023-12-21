@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "said",
+  "risk": "2",
+  "title": "`collateralizeWLp` can be bypassed even when collateralization is paused",
+  "issueId": 25,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/25"
+}
