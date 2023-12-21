@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "said",
+  "risk": "3",
+  "title": "`_handleRepay` of `MoneyMarketHook` does not consider the actual debt shares of the `posId` inside the position manager and could lead to a user's tokens getting stuck inside the hook.",
+  "issueId": 28,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/28"
+}
