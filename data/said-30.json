@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "said",
+  "risk": "3",
+  "title": "Lack of `receive()` inside `MoneyMarketHook` contract when interacting with `WNATIVE`.",
+  "issueId": 30,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/30"
+}
