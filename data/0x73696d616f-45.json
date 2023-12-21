@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "0x73696d616f",
+  "risk": "2",
+  "title": "RebaseHelperParams.rebaseHelperParams.helper is not whitelisted, which could lead to user mistakes or phishing attacks",
+  "issueId": 45,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/45"
+}
