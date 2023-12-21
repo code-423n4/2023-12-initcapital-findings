@@ -1,0 +1,8 @@
+{
+  "contest": 313,
+  "handle": "said",
+  "risk": "2",
+  "title": "When the `returnNative` parameter is set to true in the `_params` provided to `MoneyMarketHook.execute`, it is not handled properly and could disrupt user expectations",
+  "issueId": 29,
+  "issueUrl": "https://github.com/code-423n4/2023-12-initcapital-findings/issues/29"
+}
